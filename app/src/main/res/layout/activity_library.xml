@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tp.edu.sg.musicstreamv10.library"
+    android:id="@id/drawerLayout"
+    android:background="@color/backgroundColor">
+
+
+    <ScrollView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-9dp"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/S1001"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="74dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/lost_stars" />
+
+            <TextView
+                android:id="@+id/txtTitle1"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lost Stars"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1001"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1001"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist1"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adam Levine"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle1"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle1" />
+            <ImageButton
+                android:id="@+id/S1002"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/roar"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1001" />
+
+            <TextView
+                android:id="@+id/txtTitle2"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roar"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1002"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1002"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist2"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katy Perry"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle2"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
+
+            <ImageButton
+                android:id="@+id/S1003"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/photograph"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1002" />
+
+            <TextView
+                android:id="@+id/txtTitle3"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photograph"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1003"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1003"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist3"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ed Sheeran"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle3"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle3" />
+
+            <ImageButton
+                android:id="@+id/S1004"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/linkin_park"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1003" />
+
+            <TextView
+                android:id="@+id/txtTitle4"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What I've Done"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1004"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1004"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist4"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linkin Park"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle4"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle4" />
+
+
+            <ImageButton
+                android:id="@+id/S1005"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/linkin_park_2"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1004" />
+
+            <TextView
+                android:id="@+id/txtTitle5"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nobody Can Save Me"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1005"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1005"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist5"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linkin Park"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle5"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle5" />
+
+            <ImageButton
+                android:id="@+id/S1006"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/linkin_park_2"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1005" />
+
+            <TextView
+                android:id="@+id/txtTitle6"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Talking To Myself"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1006"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1006"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist6"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linkin Park"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle6"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle6" />
+
+            <ImageButton
+                android:id="@+id/S1007"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/linkin_park_2"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1006" />
+
+            <TextView
+                android:id="@+id/txtTitle7"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heavy"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1007"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1007"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist7"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linkin Park FEAT Kiiara"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle7"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle7" />
+
+            <ImageButton
+                android:id="@+id/S1008"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/divide"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/S1007" />
+
+            <TextView
+                android:id="@+id/txtTitle8"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galway Girl"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/S1008"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="@+id/S1008"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtArtist8"
+                android:onClick="handleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ed Sheeran"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txtTitle8"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle8" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="-5dp"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="#F26869"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start">
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

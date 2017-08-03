@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "350886083876",
+    "firebase_url": "https://matchtunes.firebaseio.com",
+    "project_id": "matchtunes",
+    "storage_bucket": "matchtunes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350886083876:android:677fd271d28d1049",
+        "android_client_info": {
+          "package_name": "tp.edu.sg.musicstreamv10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350886083876-7976pmc0vjosg3jekgb5mjr67fg5pr6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu4NXi-alUhG2v2-PSYcmpL9pboiuhBM0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--Custom Color-->
+    <color name="progressCircle">#df928e</color>
+    <color name="loginButton">#df928e</color>
+    <color name="backgroundColor">#e3e4db</color>
+    <color name="backSearch">#616468</color>
+    <color name="textColor">#c58882</color>
+    <color name="createAcc">#e4a5a2</color>
+    <color name="buttonBack">#F26869</color>
+    <color name="actionBar">#F26869</color>
+    <color name="notifBar">#cc5657</color>
+    <color name="toolBar">#aea4bf</color>
+    <color name="qotd">#7c848e</color>
+    <color name="white">#ffffff</color>
+</resources>

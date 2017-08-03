@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\android\databinding\baseLibrary\2.3.3\baseLibrary-2.3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eb3399988a52099b0127e27fb5bed666eca86ace">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\baseLibrary-2.3.3_cc3afaf91424e734a49c56928e36b4d96c0d272b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\School\.android\build-cache\870b4bd4a5b5f86b4031403ed98f4c35b745a508\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_cb8fd9eed7ef84077328f4a6d442cd6e708c3ce8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\School\.android\build-cache\75cdd2607575b2178196791e8a2f904a32b67429\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_f79328c602f1cd62db86a386938b3227aa4825b5.jar" />
+    </item>
+
+</items>
