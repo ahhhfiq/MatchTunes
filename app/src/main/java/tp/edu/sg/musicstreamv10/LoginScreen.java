@@ -11,13 +11,9 @@ package tp.edu.sg.musicstreamv10;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -27,7 +23,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +30,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class LoginScreen extends AppCompatActivity {
     private FirebaseAuth auth;
@@ -44,6 +38,7 @@ public class LoginScreen extends AppCompatActivity {
     private EditText editTextpassword;
     private TextView quotes;
     public int change = 0;
+    private int devchange = 0;
 
 
 
@@ -55,7 +50,7 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
         Typeface logoDesign = Typeface.createFromAsset(getApplicationContext().getAssets(),"ARCENA.ttf");
-        TextView logoSign = (TextView) findViewById(R.id.textView3);
+        TextView logoSign = (TextView) findViewById(R.id.devMode);
         logoSign.setTypeface(logoDesign);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -65,7 +60,7 @@ public class LoginScreen extends AppCompatActivity {
 
         //actionBar.hide();
 
-
+        devMode();
         onEnter();
         progressDialog = new ProgressDialog(this);
 
@@ -106,6 +101,32 @@ public class LoginScreen extends AppCompatActivity {
         };
 
         t.start();
+    }
+
+    private void devMode(){
+
+        final TextView developer = (TextView)findViewById(R.id.devMode);
+
+        developer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                devchange++;
+                System.out.println(devchange);
+
+                if(devchange==5){
+                    Toast.makeText(getApplicationContext(), "2 more steps to developer mode", Toast.LENGTH_LONG).show();
+                }
+                if(devchange==7){
+                    Toast.makeText(getApplicationContext(), "Entering developer mode", Toast.LENGTH_LONG).show();
+
+                    startActivity(new Intent(getApplicationContext(), setting.class));
+                }
+            }
+        });
+
+
+
+
     }
 
     public void userLogin(){

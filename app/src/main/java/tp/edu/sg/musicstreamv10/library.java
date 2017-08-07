@@ -121,8 +121,8 @@ public class library extends AppCompatActivity {
 
         mToolbar.setTitle("Library");
         mToolbar.setTitleTextColor(Color.WHITE);
-        setSupportActionBar(mToolbar);
         mDrawerLayout.addDrawerListener(mToggle);
+        setSupportActionBar(mToolbar);
         if(getActionBar() != null){
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }

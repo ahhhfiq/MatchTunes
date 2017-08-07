@@ -52,7 +52,6 @@ public class home extends AppCompatActivity {
         toolTitle.setTypeface(logoDesign);
 
 
-        sliderShow = (SliderLayout)findViewById(R.id.slider);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -133,22 +132,6 @@ public class home extends AppCompatActivity {
     private void imageSwitching(){
 
 
-
-        sliderShow = (SliderLayout) findViewById(R.id.slider);
-        TextSliderView textSliderView = new TextSliderView(this);
-        TextSliderView textSliderView1 = new TextSliderView(this);
-        TextSliderView textSliderView2 = new TextSliderView(this);
-        textSliderView
-                .image(R.drawable.photograph);
-        textSliderView1
-                .image(R.drawable.linkin_park_logo);
-        textSliderView2
-                .image(R.drawable.divide);
-
-        sliderShow.addSlider(textSliderView);
-        sliderShow.addSlider(textSliderView1);
-        sliderShow.addSlider(textSliderView2);
-
     }
 
     //TODO: Change to Random class
@@ -157,10 +140,5 @@ public class home extends AppCompatActivity {
         Intent intent = new Intent(this, library.class);
         startActivity(intent);
 
-    }
-    @Override
-    protected void onStop() {
-        sliderShow.stopAutoCycle();
-        super.onStop();
     }
 }

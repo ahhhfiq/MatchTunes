@@ -7,6 +7,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.*;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
 
                 System.out.println("Loading...");
+
+
             }
             public void onFinish(){
                 checkLogin();

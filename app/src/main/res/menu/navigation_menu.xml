@@ -21,6 +21,11 @@
         android:icon="@drawable/ic_library_music_black_24dp"
         android:onClick="onNavigationSelected"/>
 
+    <item android:id="@+id/playlist"
+        android:title="Playlist"
+        android:icon="@drawable/playlist"
+        android:onClick="onNavigationSelected"/>
+
     <item android:id="@+id/location"
         android:title="Location"
         android:icon="@drawable/ic_location_on_black_24dp"
