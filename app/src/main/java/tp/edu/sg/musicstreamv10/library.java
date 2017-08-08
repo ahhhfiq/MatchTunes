@@ -122,7 +122,7 @@ public class library extends AppCompatActivity {
         mToolbar.setTitle("Library");
         mToolbar.setTitleTextColor(Color.WHITE);
         mDrawerLayout.addDrawerListener(mToggle);
-        setSupportActionBar(mToolbar);
+
         if(getActionBar() != null){
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
@@ -130,7 +130,7 @@ public class library extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         mToggle.syncState();
-
+        setSupportActionBar(mToolbar);
     }
 
 

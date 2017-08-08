@@ -58,11 +58,12 @@
             android:name=".library"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/search_config"/>
+                android:resource="@xml/search_config" />
         </activity>
         <activity
             android:name=".chat"
@@ -70,7 +71,10 @@
         <activity
             android:name=".chatSideBestSide"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".locationlocationlocation"></activity>
+        <activity android:name=".locationlocationlocation" />
+        <activity android:name=".myAccount" />
+        <activity android:name=".notif" />
+        <activity android:name=".abouttheapp"></activity>
     </application>
 
 </manifest>

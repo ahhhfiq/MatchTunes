@@ -1,5 +1,6 @@
 package tp.edu.sg.musicstreamv10;
 
+import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
@@ -70,6 +71,12 @@ public class playMusic extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.seekBar);
 
 
+        Typeface logoDesign = Typeface.createFromAsset(getApplicationContext().getAssets(), "ARCENA.ttf");
+        TextView logoSign = (TextView) findViewById(R.id.toolTitle);
+        logoSign.setTypeface(logoDesign);
+
+
+
         lostStars[0] = "S1001";
         lostStars[1] = "Lost Stars";
         lostStars[2] = "Adam Levine";
@@ -125,8 +132,8 @@ public class playMusic extends AppCompatActivity {
         galway[3]="cec1fc40a0220f20d3b91dd28d8e1141ad5e7e25?cid=2afe87a64b0042dabf51f37318616965";
         galway[4]="2.85";
         galway[5]="divide";
-        shuffleFunc();
         loopFunc();
+        shuffleFunc();
         retrievedData();
         displaySong(title, artist, coverArt);
         autoPlayMusic();
@@ -181,7 +188,7 @@ public class playMusic extends AppCompatActivity {
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
         seekBar.setMax(player.getDuration());
         seekHandler = new Handler();
-        findViewById(R.id.playNpause).setBackgroundResource(R.drawable.pausebutton);
+        findViewById(R.id.playNpause).setBackgroundResource(R.drawable.ic_pause_black_24dp);
 
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -190,8 +197,6 @@ public class playMusic extends AppCompatActivity {
                 String[] nextLoopSong = nextLoopSong(songId);
                 if (loopAct){
                     System.out.println("Next");
-
-
 
                     if (nextLoopSong!=null) {
 
@@ -212,6 +217,19 @@ public class playMusic extends AppCompatActivity {
                         autoPlayMusic();
 
                     }
+                }
+                else if(loopAct && shuffleAct){
+
+                    songId = nextLoopSong[0];
+                    title = nextLoopSong[1];
+                    artist = nextLoopSong[2];
+                    fileLink = nextLoopSong[3];
+                    coverArt = nextLoopSong[5];
+                    System.out.println(songId);
+                    url = BASE_URL + fileLink;
+                    displaySong(title, artist, coverArt);
+                    stopActivities();
+                    autoPlayMusic();
                 }
                 else{
                     if(nextSong != null)
@@ -286,7 +304,7 @@ public class playMusic extends AppCompatActivity {
                 player.seekTo(musicPosition);
             }
             player.start();
-            findViewById(R.id.playNpause).setBackgroundResource(R.drawable.pausebutton);
+            findViewById(R.id.playNpause).setBackgroundResource(R.drawable.ic_pause_black_24dp);
 
             setTitle("Now Playing: " + title + " - " + artist);
 
@@ -335,7 +353,7 @@ public class playMusic extends AppCompatActivity {
     {
         if (player != null)
         {
-            findViewById(R.id.playNpause).setBackgroundResource(R.drawable.pausebutton);
+            findViewById(R.id.playNpause).setBackgroundResource(R.drawable.ic_pause_black_24dp);
             musicPosition = 0;
             setTitle("");
             player.stop();
@@ -352,7 +370,7 @@ public class playMusic extends AppCompatActivity {
 // 2. Get the current position of the music that is playing.
         musicPosition = player.getCurrentPosition();
 // 3. Set the image on the button back to “PLAY”
-        findViewById(R.id.playNpause).setBackgroundResource(R.drawable.playbutton);
+        findViewById(R.id.playNpause).setBackgroundResource(R.drawable.ic_play_arrow_black_24dp);
     }
 
 
@@ -478,8 +496,8 @@ public class playMusic extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
-                    System.out.println("Shuffle ON");
                     shuffleAct = true;
+                    System.out.println("Shuffle " + shuffleAct);
                     btnShuffle.setBackgroundResource(R.drawable.shuffleon);
 
                 }
@@ -495,13 +513,18 @@ public class playMusic extends AppCompatActivity {
         playNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[]  nextSong=getNextSong(songId);
-
+                String[]  nextSong=nextLoopSong(songId);
+                System.out.println("next "+shuffleAct);
                 if(shuffleAct) {
+
                     System.out.println("Next");
                     if (nextSong!=null)
                     {
-                        int n = ThreadLocalRandom.current().nextInt(1,8);
+                        System.out.println("shuffle random");
+                        Random random = new Random();
+
+                        int n = random.nextInt(7)+1;
+
                         System.out.println(n);
                         nextSong= (String[])songs[n];
                         songId =nextSong[0];
@@ -551,11 +574,12 @@ public class playMusic extends AppCompatActivity {
         playPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[]  prevSong=getPrevSong(songId);
+                String[]  prevSong=prevLoopSong(songId);
                 if (shuffleAct) {
                     if (prevSong != null) {
                         Random random = new Random();
-                        int n = ThreadLocalRandom.current().nextInt(1,8);
+
+                        int n = random.nextInt(7)+1;
                         prevSong = (String[]) songs[n];
                         System.out.println(songId);
 
@@ -635,20 +659,15 @@ public class playMusic extends AppCompatActivity {
                             artist = nextLoopSong[2];
                             fileLink = nextLoopSong[3];
                             coverArt = nextLoopSong[5];
-
                             System.out.println(songId);
-
                             url = BASE_URL + fileLink;
-
                             displaySong(title, artist, coverArt);
-
                             stopActivities();
-
                             autoPlayMusic();
 
                     }
                 }
-                else{
+               /* else{
                     if(nextSong != null)
                     {
 
@@ -667,7 +686,7 @@ public class playMusic extends AppCompatActivity {
                         autoPlayMusic();
 
                     }
-                }
+                }*/
 
             }
         });
@@ -695,7 +714,7 @@ public class playMusic extends AppCompatActivity {
 
                     }
                 }
-                else{
+               /* else{
 
                     if(prevSong != null){
                         songId=prevSong[0];
@@ -712,7 +731,7 @@ public class playMusic extends AppCompatActivity {
 
                         autoPlayMusic();
                     }
-                }
+                }*/
             }
         });
     }

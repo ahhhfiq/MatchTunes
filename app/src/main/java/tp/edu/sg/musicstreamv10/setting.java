@@ -99,4 +99,22 @@ public class setting extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void myAcc(View view) {
+        Intent intent = new Intent(this, notif.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+    }
+
+    public void notif(View view) {
+        Intent intent = new Intent(this, notif.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+    }
+
+    public void about(View view) {
+        Intent intent = new Intent(this, abouttheapp.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+    }
 }
