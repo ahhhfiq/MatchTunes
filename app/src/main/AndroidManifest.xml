@@ -11,14 +11,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/fire"
+        android:icon="@mipmap/thenewlogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/fire"
+        android:roundIcon="@mipmap/thenewlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -74,7 +75,12 @@
         <activity android:name=".locationlocationlocation" />
         <activity android:name=".myAccount" />
         <activity android:name=".notif" />
-        <activity android:name=".abouttheapp"></activity>
+        <activity android:name=".abouttheapp" />
+        <activity android:name=".playlist" />
+        <activity android:name=".searchme" />
+        <activity android:name=".tbt" />
+        <activity android:name=".instrumental" />
+        <activity android:name=".play_music2"></activity>
     </application>
 
 </manifest>

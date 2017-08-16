@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
 
                 System.out.println("Loading...");
-
-
             }
             public void onFinish(){
                 checkLogin();

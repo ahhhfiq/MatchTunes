@@ -30,7 +30,7 @@
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:text="Location"
                 android:textColor="#ffff" />
         </android.support.v7.widget.Toolbar>
@@ -43,10 +43,30 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/location" />
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ToggleButton
+            android:id="@+id/locationSwitch"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/locatetoggle"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/nav_header"
         android:layout_gravity="start">
     </android.support.design.widget.NavigationView>
 

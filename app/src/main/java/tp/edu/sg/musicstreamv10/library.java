@@ -130,7 +130,7 @@ public class library extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         mToggle.syncState();
-        setSupportActionBar(mToolbar);
+
     }
 
 
@@ -151,8 +151,18 @@ public class library extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
+        else if (id==R.id.search){
+            Intent intent = new Intent(this, searchme.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
         else if (id == R.id.library){
             Intent intent = new Intent(this, library.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
+        else if (id == R.id.playlist){
+            Intent intent = new Intent(this, playlist.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
@@ -169,7 +179,6 @@ public class library extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     public void handleSelection(View view) {
 
         String resourceID = AppUtil.getResourceId(this,view);
@@ -216,35 +225,5 @@ public class library extends AppCompatActivity {
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.searchmenu, menu);
-        MenuItem item = menu.findItem(R.id.menuSearch);
-        SearchView searchView = (SearchView)item.getActionView();
-        SearchManager searchManager = (SearchManager) library.this.getSystemService(Context.SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-
-        if(searchView.isIconified()){
-            searchView.setQuery("", false);
-            searchView.clearFocus();
-        }
-        else{
-            searchView.setQueryHint("Search songs");
-        }
-
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            public boolean onQueryTextChange(String newText) {
-                return false;
-
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
-    }
 
 }

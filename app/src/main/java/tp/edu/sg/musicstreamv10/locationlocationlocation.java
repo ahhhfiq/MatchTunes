@@ -1,6 +1,8 @@
 package tp.edu.sg.musicstreamv10;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,6 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
+
+import java.util.Random;
 
 public class locationlocationlocation extends AppCompatActivity {
 
@@ -16,14 +22,18 @@ public class locationlocationlocation extends AppCompatActivity {
     private ActionBarDrawerToggle mToggle;
     private ActionBar actionBar;
     private Toolbar mToolbar;
+    private ToggleButton locateToggle;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_locationlocationlocation);
 
-        mToolbar =(Toolbar)findViewById(R.id.toolbar3);
+        progressDialog = new ProgressDialog(this);
 
+        mToolbar =(Toolbar)findViewById(R.id.toolbar3);
+        locateToggle = (ToggleButton)findViewById(R.id.locationSwitch);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mToolbar =(Toolbar) findViewById(R.id.toolbar3);
@@ -39,6 +49,7 @@ public class locationlocationlocation extends AppCompatActivity {
         }
         mToggle.syncState();
 
+        locationfinder();
 
     }
 
@@ -64,6 +75,11 @@ public class locationlocationlocation extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
+        else if (id == R.id.playlist){
+            Intent intent = new Intent(this, playlist.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
         else if (id == R.id.location){
 
             Intent intent = new Intent(this, locationlocationlocation.class);
@@ -77,4 +93,49 @@ public class locationlocationlocation extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void locationfinder(){
+
+        locateToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    new CountDownTimer(3000 ,1000){
+                        public void onTick(long millisUntilFinished) {
+
+                            System.out.println("Loading...");
+                            progressDialog.setMessage("Finding users near you");
+                            progressDialog.show();
+
+                        }
+                        public void onFinish(){
+                            progressDialog.dismiss();
+                        }
+                    }.start();
+
+                }
+
+                else{
+                    new CountDownTimer(4000 ,1000){
+                        public void onTick(long millisUntilFinished) {
+
+                            System.out.println("Loading...");
+                            progressDialog.setMessage("Turning off");
+                            progressDialog.show();
+
+                        }
+                        public void onFinish(){
+                            progressDialog.dismiss();
+                        }
+                    }.start();
+
+                }
+
+            }
+        });
+
+    }
+
+
 }

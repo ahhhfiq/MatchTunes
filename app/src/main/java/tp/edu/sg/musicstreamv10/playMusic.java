@@ -1,28 +1,22 @@
 package tp.edu.sg.musicstreamv10;
 
+import android.content.Context;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 import tp.edu.sg.musicstreamv10.util.AppUtil;
 
@@ -31,6 +25,7 @@ public class playMusic extends AppCompatActivity {
     private MediaPlayer player = null;
     private int musicPosition = 0;
     private Button btnPlayPause = null;
+    private ToggleButton volToggle;
 
 
 
@@ -41,6 +36,9 @@ public class playMusic extends AppCompatActivity {
     private String fileLink="";
     private String coverArt="";
     private String url     ="";
+
+    private SeekBar volumeSeekbar = null;
+    private AudioManager audioManager = null;
 
     private boolean shuffleAct = false;
     private boolean loopAct    = false;
@@ -68,13 +66,11 @@ public class playMusic extends AppCompatActivity {
 
         btnPlayPause =(Button)findViewById(R.id.playNpause);
 
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
-
+        seekBar = (SeekBar) findViewById(R.id.seekBar1);
 
         Typeface logoDesign = Typeface.createFromAsset(getApplicationContext().getAssets(), "ARCENA.ttf");
         TextView logoSign = (TextView) findViewById(R.id.toolTitle);
         logoSign.setTypeface(logoDesign);
-
 
 
         lostStars[0] = "S1001";
@@ -137,6 +133,7 @@ public class playMusic extends AppCompatActivity {
         retrievedData();
         displaySong(title, artist, coverArt);
         autoPlayMusic();
+        initControls();
     }
 
     private void retrievedData() {
@@ -177,6 +174,7 @@ public class playMusic extends AppCompatActivity {
 
         // This is to set the selected cover art image to the ImageView in the screen.
         ivCoverArt.setImageResource(imageId);
+
     }
 
     public void autoPlayMusic(){
@@ -185,7 +183,7 @@ public class playMusic extends AppCompatActivity {
             preparePlayer();
 
         player.start();
-        final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
+        final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar1);
         seekBar.setMax(player.getDuration());
         seekHandler = new Handler();
         findViewById(R.id.playNpause).setBackgroundResource(R.drawable.ic_pause_black_24dp);
@@ -218,18 +216,34 @@ public class playMusic extends AppCompatActivity {
 
                     }
                 }
-                else if(loopAct && shuffleAct){
+                else if (shuffleAct)
+                {
+                    if (nextSong!=null)
+                    {
+                        System.out.println("shuffle random");
+                        Random random = new Random();
 
-                    songId = nextLoopSong[0];
-                    title = nextLoopSong[1];
-                    artist = nextLoopSong[2];
-                    fileLink = nextLoopSong[3];
-                    coverArt = nextLoopSong[5];
-                    System.out.println(songId);
-                    url = BASE_URL + fileLink;
-                    displaySong(title, artist, coverArt);
-                    stopActivities();
-                    autoPlayMusic();
+                        int n = random.nextInt(7)+1;
+
+                        System.out.println(n);
+                        nextSong=(String[])songs[n];
+                        songId=nextSong[0];
+                        title=nextSong[1];
+                        artist=nextSong[2];
+                        fileLink=nextSong[3];
+                        coverArt=nextSong[5];
+
+                        System.out.println(songId);
+
+                        url = BASE_URL + fileLink;
+
+                        displaySong(title,artist,coverArt);
+
+                        stopActivities();
+
+                        autoPlayMusic();
+
+                    }
                 }
                 else{
                     if(nextSong != null)
@@ -286,9 +300,6 @@ public class playMusic extends AppCompatActivity {
         });
 
     }
-
-
-
 
     public void playOrPauseMusic(View view)
     {
@@ -375,18 +386,14 @@ public class playMusic extends AppCompatActivity {
 
 
     public String[] getNextSong(String currentSongId) {
-
 //Create a temporary empty string
         String[] song = null;
-
 //starting from index 0 of the songs array to the last one.
 //Loop through every song item. Increment the index by one after every loop
-
         for (int index=0; index < songs.length;index++)
         {
 //create a temporary String Array to store each item in the songs array
             String[] tempSong = (String[]) songs[index];
-
 //if we are able to find the current song from the array - which we should...
 //we check if that song position in the array is NOT the last item so that we can go next item
             if (tempSong[0].equals(currentSongId) && (index < songs.length-1))
@@ -395,24 +402,20 @@ public class playMusic extends AppCompatActivity {
 //break away from the For loop since we are able to return the next song item
                 break;
             }
-
         }
 //return the song item to the caller
         return song;
     }
 
     public String[] getPrevSong(String currentSongId) {
-
 //Create a temporary empty string
         String[] song = null;
-
 //starting from index 0 of the songs array to the last one.
 //Loop through every song item. Increment the index by one after every loop
         for (int index=0; index < songs.length;index++)
         {
 //create a temporary String Array to store each item in the songs array
             String[] tempSong = (String[]) songs[index];
-
 //if we are able to find the current song from the array - which we should...
 //we check if that song position in the array is NOT the first item so that we can get the item before it
             if (tempSong[0].equals(currentSongId) && (index >= 1))
@@ -426,10 +429,8 @@ public class playMusic extends AppCompatActivity {
     }
 
     public String[] nextLoopSong(String currentSongId){
-
 //Create a temporary empty string
         String[] song = null;
-
 //starting from index 0 of the songs array to the last one.
 //Loop through every song item. Increment the index by one after every loop
 
@@ -437,7 +438,6 @@ public class playMusic extends AppCompatActivity {
         {
 //create a temporary String Array to store each item in the songs array
             String[] tempSong = (String[]) songs[index];
-
 //if we are able to find the current song from the array - which we should...
 //we check if that song position in the array is NOT the last item so that we can go next item
             if (tempSong[0].equals(currentSongId) && (index < songs.length-1))
@@ -450,7 +450,6 @@ public class playMusic extends AppCompatActivity {
             {
                 song =(String[]) songs[0];
             }
-
         }
 //return the song item to the caller
         return song;
@@ -645,12 +644,9 @@ public class playMusic extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String[] nextSong = getNextSong(songId);
                 String[] nextLoopSong = nextLoopSong(songId);
                 if (loopAct){
                     System.out.println("Next");
-
-
 
                    if (nextLoopSong!=null) {
 
@@ -667,26 +663,6 @@ public class playMusic extends AppCompatActivity {
 
                     }
                 }
-               /* else{
-                    if(nextSong != null)
-                    {
-
-                        songId=nextSong[0];
-                        title=nextSong[1];
-                        artist=nextSong[2];
-                        fileLink=nextSong[3];
-                        coverArt=nextSong[5];
-
-                        url = BASE_URL + fileLink;
-
-                        displaySong(title,artist,coverArt);
-
-                        stopActivities();
-
-                        autoPlayMusic();
-
-                    }
-                }*/
 
             }
         });
@@ -694,7 +670,6 @@ public class playMusic extends AppCompatActivity {
         playPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[]  prevSong = getPrevSong(songId);
                 String[]  prevLoopSong=prevLoopSong(songId);
                 if (loopAct) {
 
@@ -714,33 +689,62 @@ public class playMusic extends AppCompatActivity {
 
                     }
                 }
-               /* else{
 
-                    if(prevSong != null){
-                        songId=prevSong[0];
-                        title=prevSong[1];
-                        artist=prevSong[2];
-                        fileLink=prevSong[3];
-                        coverArt=prevSong[5];
-
-                        url = BASE_URL + fileLink;
-
-                        displaySong(title,artist,coverArt);
-
-                        stopActivities();
-
-                        autoPlayMusic();
-                    }
-                }*/
             }
         });
     }
 
 
+    private void initControls(){
+
+        volToggle = (ToggleButton)findViewById(R.id.volumeToggle);
+        volumeSeekbar = (SeekBar)findViewById(R.id.volBar);
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+
+        volToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    volumeSeekbar.setVisibility(View.VISIBLE);
+                }
+                else{
+                    volumeSeekbar.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        try{
+            volumeSeekbar.setMax(audioManager
+                    .getStreamMaxVolume(AudioManager.STREAM_MUSIC));
+            volumeSeekbar.setProgress(audioManager
+                    .getStreamVolume(AudioManager.STREAM_MUSIC));
+
+
+            volumeSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
+            {
+                @Override
+                public void onStopTrackingTouch(SeekBar arg0){
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar arg0) {
+                }
+
+                @Override
+                public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
+                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,
+                            progress, 0);
+                }
+            });
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void onBackPressed(){
-
         stopActivities();
         finish();
         super.onBackPressed();

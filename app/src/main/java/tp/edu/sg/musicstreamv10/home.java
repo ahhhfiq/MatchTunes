@@ -39,8 +39,6 @@ public class home extends AppCompatActivity {
     //maps screen by 23/7/17
     //Remove redundant items
 
-
-    private SliderLayout sliderShow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,9 +90,9 @@ public class home extends AppCompatActivity {
 
 
 
+
     public boolean onNavigationSelected(MenuItem item){
         int id = item.getItemId();
-
         if (id == R.id.home){
             Intent intent = new Intent(this, home.class);
             startActivity(intent);
@@ -110,12 +108,23 @@ public class home extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
+        else if (id==R.id.search){
+            Intent intent = new Intent(this, searchme.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
         else if (id == R.id.library){
             Intent intent = new Intent(this, library.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
+        else if (id == R.id.playlist){
+            Intent intent = new Intent(this, playlist.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
         else if (id == R.id.location){
+
             Intent intent = new Intent(this, locationlocationlocation.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
@@ -128,13 +137,21 @@ public class home extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     private void imageSwitching(){
 
 
     }
 
-    //TODO: Change to Random class
+    public void tbt(View view) {
+        Intent intent= new Intent(this, tbt.class);
+        startActivity(intent);
+    }
+
+    public void instrumental(View view) {
+        Intent intent= new Intent(this, instrumental.class);
+        startActivity(intent);
+    }
+
     public void libraryClicker(View view){
 
         Intent intent = new Intent(this, library.class);

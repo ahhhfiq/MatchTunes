@@ -71,19 +71,20 @@
                     android:text="Chat"
                     android:textColor="#ffff" />
 
-                <ImageView
-                    android:id="@+id/backButton"
-                    android:layout_width="63dp"
-                    android:layout_height="55dp"
-                    app:srcCompat="@drawable/exit"
-                    android:onClick="backButton"
-                    app:layout_constraintLeft_toLeftOf="@+id/exitBar"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintRight_toRightOf="@+id/exitBar"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    android:layout_marginEnd="8dp" />
             </android.support.v7.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="63dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:onClick="backButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/exitBar"
+                app:layout_constraintRight_toRightOf="@+id/exitBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/exit" />
         </android.support.constraint.ConstraintLayout>
 
 

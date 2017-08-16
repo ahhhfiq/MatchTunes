@@ -47,9 +47,9 @@ public class profile extends AppCompatActivity {
 
 
 
+
     public boolean onNavigationSelected(MenuItem item){
         int id = item.getItemId();
-
         if (id == R.id.home){
             Intent intent = new Intent(this, home.class);
             startActivity(intent);
@@ -65,12 +65,23 @@ public class profile extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
+        else if (id==R.id.search){
+            Intent intent = new Intent(this, searchme.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
         else if (id == R.id.library){
             Intent intent = new Intent(this, library.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
+        else if (id == R.id.playlist){
+            Intent intent = new Intent(this, playlist.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        }
         else if (id == R.id.location){
+
             Intent intent = new Intent(this, locationlocationlocation.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
@@ -82,7 +93,6 @@ public class profile extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     public void saveItAll(View view) {
         Intent intent = new Intent(this, home.class);

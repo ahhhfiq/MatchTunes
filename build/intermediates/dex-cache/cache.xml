@@ -2,6 +2,33 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\257df549ebb3ded98b61e0ed0cc00afa3849decb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a61005619e43f203768ff3f224137def6f029e50">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b1cf2aaf2bfb20f94ecfb718af7b435d30409895\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\be66f14c382f290c851eecbdb9f8c2377923e1a8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ce6e6e59212db0893fc36e5b579cf319a84aade8">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_711fe6fa95749f136c1a84f98b424f1cd6b5c941\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\870b4bd4a5b5f86b4031403ed98f4c35b745a508\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cb8fd9eed7ef84077328f4a6d442cd6e708c3ce8\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\School\.android\build-cache\257df549ebb3ded98b61e0ed0cc00afa3849decb\output\jars\classes.jar"
         jumboMode="false"
@@ -38,6 +65,15 @@
         <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_f79328c602f1cd62db86a386938b3227aa4825b5.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\android\databinding\baseLibrary\2.3.3\baseLibrary-2.3.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eb3399988a52099b0127e27fb5bed666eca86ace">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\baseLibrary-2.3.3_cc3afaf91424e734a49c56928e36b4d96c0d272b\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\School\.android\build-cache\1e8b84ed1866088f24c8b54615d4730206d81e03\output\jars\classes.jar"
         jumboMode="false"
@@ -45,6 +81,78 @@
         revision="25.0.3"
         sha1="8bb364f67ec2eba2356872b2b4ddfe8aada2d5ac">
         <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_0062b18a878f7045a6c3eef83e755c0e9669ef66.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\1e8b84ed1866088f24c8b54615d4730206d81e03\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8bb364f67ec2eba2356872b2b4ddfe8aada2d5ac">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0062b18a878f7045a6c3eef83e755c0e9669ef66\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\994b3197432cd99ccb441383fc47bb67c014c7ac\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3347c3e7056fabc88bdbd8fdae65ddf2b674d977">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_72e7b4590a346002c6768ffaf98893b08512be2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\School\.android\build-cache\870b4bd4a5b5f86b4031403ed98f4c35b745a508\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_cb8fd9eed7ef84077328f4a6d442cd6e708c3ce8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3e65030186a692f460da5eef5cc38aaf0c912291">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_d25aace3db601fcaba3341a143474ab548c6042a\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\School\.android\build-cache\63916b71ecc084ffe06cea4458e2bad5bf9f16ff\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3a05b3852a6aec21ea0a6ea4d284ee69c04c55c4">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_e541084c66d8d3ca13ccdb8841cd875e91774c72.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\63916b71ecc084ffe06cea4458e2bad5bf9f16ff\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3a05b3852a6aec21ea0a6ea4d284ee69c04c55c4">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e541084c66d8d3ca13ccdb8841cd875e91774c72\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\34a49e9b62cd7e91fc55046dfd38db076ed1e750\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="08962e03b6a954c65d4944e092879b7f5ee1208d">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b2bfb6872186a69fd018fc21be502cc0ff6ecd77\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_46f0f8502f1922820dbee03791cfc210e9265ca7\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -83,6 +191,15 @@
         <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_3f0401125b48a4c66ddde9c6fb1834cccba72e90.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\3d7ea2cf8acd67da29f26cc9dfa0550c5c3caac3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2b410ae1fda134f470276365f4b7f846269e0d23">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_982401f8f2647e4447e7405f4adac705f895151b\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\School\.android\build-cache\b01854deb5d3bee04186c207f5932110f6e8513d\output\jars\classes.jar"
         jumboMode="false"
@@ -90,6 +207,51 @@
         revision="25.0.3"
         sha1="41e39c7ee84e63ae18df6c6ccb96d196996add4c">
         <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_0064e8171634aacf6241eb568c7c237909c12ae0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\93f955ba0e49edd8e9557fdded2318c395ae7d5a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c7ed3fd9d5a9687980dac6c504abd91ad3dfa238">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3f0401125b48a4c66ddde9c6fb1834cccba72e90\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\b01854deb5d3bee04186c207f5932110f6e8513d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="41e39c7ee84e63ae18df6c6ccb96d196996add4c">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0064e8171634aacf6241eb568c7c237909c12ae0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\75cdd2607575b2178196791e8a2f904a32b67429\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f79328c602f1cd62db86a386938b3227aa4825b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\05d8e54d42caef7e7cd1164ef600b1e0289331a1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="75dbc3537bc912d077b3db2f5ac72d5b43644b2c">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5dd8860522a3590c46aac785400052a1909629d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\School\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_66f0ebabc8e0b62e8ab04614c8a889bfd8b6150f\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -101,22 +263,22 @@
         <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_4378d7ef2404300bba9eae37616b71cab73eaf2a.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\School\.android\build-cache\870b4bd4a5b5f86b4031403ed98f4c35b745a508\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\School\.android\build-cache\1b715b14ceee43a77e8a69d47131fb1a8f5b76c9\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
-        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_cb8fd9eed7ef84077328f4a6d442cd6e708c3ce8.jar" />
+        sha1="985be85104f6d0c5c5e51e7b7e60d8883a98ac64">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4378d7ef2404300bba9eae37616b71cab73eaf2a\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\School\.android\build-cache\63916b71ecc084ffe06cea4458e2bad5bf9f16ff\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\School\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.3.2\d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27\picasso-2.3.2.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="3a05b3852a6aec21ea0a6ea4d284ee69c04c55c4">
-        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\pre-dexed\debug\classes_e541084c66d8d3ca13ccdb8841cd875e91774c72.jar" />
+        sha1="d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27">
+        <dex dex="C:\Users\School\Desktop\GIT\MatchTunes\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.3.2_fb37995d47e1073be8f76bd2d80a16045203c673\classes.dex" />
     </item>
 
 </items>
