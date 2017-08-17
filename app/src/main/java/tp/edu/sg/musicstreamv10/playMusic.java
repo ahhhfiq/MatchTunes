@@ -498,7 +498,6 @@ public class playMusic extends AppCompatActivity {
                     shuffleAct = true;
                     System.out.println("Shuffle " + shuffleAct);
                     btnShuffle.setBackgroundResource(R.drawable.shuffleon);
-
                 }
                 else{
                     btnShuffle.setBackgroundResource(R.drawable.shuffleoff);

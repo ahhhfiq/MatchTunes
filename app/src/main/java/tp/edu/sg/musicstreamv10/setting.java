@@ -141,7 +141,7 @@ public class setting extends AppCompatActivity {
     }
 
     public void myAcc(View view) {
-        Intent intent = new Intent(this, notif.class);
+        Intent intent = new Intent(this, myAccount.class);
         startActivity(intent);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }

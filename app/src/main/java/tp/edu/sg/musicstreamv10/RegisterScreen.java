@@ -56,7 +56,6 @@ public class RegisterScreen extends AppCompatActivity {
 
     private void createAcc(){
 
-
         inputEmail = (EditText) findViewById(R.id.email);
         inputPass = (EditText) findViewById(R.id.password);
         reputPass = (EditText) findViewById(R.id.retypePassword);
