@@ -1,5 +1,6 @@
 package tp.edu.sg.musicstreamv10;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,9 @@ public class chatSideBestSide extends AppCompatActivity {
     }
 
     public void backButton(View view) {
-        super.onBackPressed();
+        Intent intent = new Intent(this, chat.class);
+        startActivity(intent);
+
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }

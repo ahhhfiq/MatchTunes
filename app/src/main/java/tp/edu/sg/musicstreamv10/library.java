@@ -119,8 +119,6 @@ public class library extends AppCompatActivity {
         mToolbar =(Toolbar) findViewById(R.id.toolbar3);
         mToggle = new ActionBarDrawerToggle(this,  mDrawerLayout, mToolbar, R.string.open, R.string.close);
 
-        mToolbar.setTitle("Library");
-        mToolbar.setTitleTextColor(Color.WHITE);
         mDrawerLayout.addDrawerListener(mToggle);
 
         if(getActionBar() != null){

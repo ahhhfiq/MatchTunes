@@ -27,7 +27,7 @@
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="center"
                 android:text="Chat"
                 android:textColor="#ffff" />
         </android.support.v7.widget.Toolbar>
@@ -43,16 +43,16 @@
             android:id="@+id/contactName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="33dp"
             android:layout_marginLeft="8dp"
-            android:text="Richard"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="15dp"
+            android:text="Rebecca"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/contactPic"
             app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintLeft_toRightOf="@+id/contactPic"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/contactPic"
-            android:layout_marginBottom="33dp"
-            android:layout_marginStart="15dp"/>
+            app:layout_constraintRight_toRightOf="parent" />
 
         <ImageView
             android:id="@+id/contactPic"
@@ -61,7 +61,7 @@
             android:layout_marginLeft="16dp"
             android:onClick="goToChat"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:srcCompat="@drawable/profilepic"
+            app:srcCompat="@drawable/profile"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="77dp" />
     </android.support.constraint.ConstraintLayout>

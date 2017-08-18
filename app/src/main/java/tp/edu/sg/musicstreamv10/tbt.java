@@ -39,8 +39,6 @@ public class tbt extends AppCompatActivity {
 
         mToolbar = (Toolbar)findViewById(R.id.toolbar3);
 
-        mToolbar.setTitle("Throwback Thursday");
-        mToolbar.setTitleTextColor(Color.WHITE);
     }
     public void handleSelection(View view) {
 
